@@ -1,0 +1,7 @@
+﻿This application might contain names of actual Automobile dealerships. If so, in no way is this application related
+to any dealership or automobile manufacturer. All data in this application is used as illustration only in order to
+give the application a real-feel context.
+This is also true of make and model of any vehicle represented by data held inside of the application. In no way is
+this application related to an auto manufacturer and is no meant to represent views of any real person or entity towards
+said auto manufacturer(s). Again, this is only illustrative data. Anyone who uses, modifies, or publishes any piece of this 
+code for any purpose must include this license and is fully responsible for whatever outcome.
