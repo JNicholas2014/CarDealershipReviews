@@ -45,7 +45,8 @@ namespace CarDealershipReviews
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
-                configuration.RootPath = "ClientApp/dist";
+                //configuration.RootPath = "CarDealershipReviews/dist";//--this line should be uncommented to run the app created by using Angular CLI
+                configuration.RootPath = "ClientApp/dist";//--this line should be uncommented to run the app created by Visual Studio
             });
         }
 
@@ -65,7 +66,10 @@ namespace CarDealershipReviews
             }
 
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
+            app.UseStaticFiles(new StaticFileOptions()
+            {
+                OnPrepareResponse = (context) => { context.Context.Response.Headers["Cache-Control"] = "max-age=3600"; }
+            });
             if (!env.IsDevelopment())
             {
                 app.UseSpaStaticFiles();
@@ -89,7 +93,8 @@ namespace CarDealershipReviews
                 // To learn more about options for serving an Angular SPA from ASP.NET Core,
                 // see https://go.microsoft.com/fwlink/?linkid=864501
 
-                spa.Options.SourcePath = "ClientApp";
+                //spa.Options.SourcePath = "CarDealershipReviews";//--this line should be uncommented to run the app created by using Angular CLI
+                spa.Options.SourcePath = "ClientApp";//--this line should be uncommented to run the app created by Visual Studio
 
                 if (env.IsDevelopment())
                 {
