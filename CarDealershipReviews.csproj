@@ -36,10 +36,10 @@
     <None Remove="ClientApp\src\app\app-routing.module.ts" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="wwwroot\Images\" />
+    <TypeScriptCompile Include="ClientApp\src\app\app-routing.module.ts" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="ClientApp\src\app\app-routing.module.ts" />
+    <Folder Include="wwwroot\Images\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
